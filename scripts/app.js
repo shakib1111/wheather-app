@@ -6,15 +6,15 @@ const details=document.querySelector('.details');
 const updatUI=(data)=>
 {
     const cityDets=data.cityDets;
-    const wheather=data.wheather;
+    const weather=data.weather;
 
     //update details template
 
     details.innerHTML=`
             <h5 class="my-3">${cityDets.EnglishName}</h5>
-            <div class="my-3">${wheather.wheatherText}</div>
+            <div class="my-3">${weather.WeatherText}</div>
             <div class="display-4 my-4">
-              <span>${wheather.Temperature.Metric.Value}</span>
+              <span>${weather.Temperature.Metric.Value}</span>
               <span>&deg;C</span>
             </div>
     
@@ -27,11 +27,11 @@ const updatUI=(data)=>
 const updateCity=async(city)=>{
 
     const cityDets= await getCity(city);
-    const wheather= await getwheather(cityDets.Key);
+    const weather= await getWeather(cityDets.Key);
 
     return {
         cityDets: cityDets,
-        wheather: wheather
+        weather: weather
     };
  
 };
