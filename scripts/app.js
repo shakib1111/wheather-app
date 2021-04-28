@@ -12,7 +12,7 @@ const updatUI=(data)=>
 
     details.innerHTML=`
             <h5 class="my-3">${cityDets.EnglishName}</h5>
-            <div class="my-3">${wheather.weatherText}</div>
+            <div class="my-3">${wheather.wheatherText}</div>
             <div class="display-4 my-4">
               <span>${wheather.Temperature.Metric.Value}</span>
               <span>&deg;C</span>
