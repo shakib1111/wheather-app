@@ -2,7 +2,15 @@ const cityForm=document.querySelector('form');
 
 
 const updateCity=async(city)=>{
- console.log(city)
+
+    const cityDets= await getCity(city);
+    const wheather= await getWheather(cityDets.Key);
+
+    return {
+        cityDets: cityDets,
+        wheather: wheather
+    };
+ 
 };
 
 cityForm.addEventListener('submit',e=>{
