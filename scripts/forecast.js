@@ -24,12 +24,3 @@ const getCity=async(city)=>{
     const data = await response.json();
     return data[0];
 };
-
-getCity('mumbai')
-        .then(data=> {
-            return getWheather(data.Key)
-        }
-        ).then(data=>{
-            console.log(data)
-        })
-        .catch(err=> console.log(err));
